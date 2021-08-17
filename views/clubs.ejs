@@ -1,0 +1,19 @@
+<%- include("partials/header") %>
+		 
+		<div class="container">
+			<div class="row mt-2">
+				<% clubs.forEach((club) => { %>
+					<div class="card m-3">
+						<a href="/clubs/<%=club._id%>"><img class="card-img card-img-top" src="<%=club.image %>" alt="picture">
+						</a>	
+						<h3 class="class-title mt-3"><%=club.title %></h3>
+						<div class="card-body mb-1 mt-1 me-1">
+							<blockquote class="blockquote mb-0">
+							  <h4 class="card-motto"><%= club.motto %></h4>
+							</blockquote>
+						</div>	
+					</div>
+				<% }) %>
+			</div>
+		</div>
+<%- include("partials/footer") %>		

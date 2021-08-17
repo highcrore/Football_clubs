@@ -1,0 +1,47 @@
+<%- include("partials/header") %>
+	<div class="container">
+		<h1>Edit club info</h1>
+		<form action="/clubs/<%= club._id %>?_method=PUT" method="POST">
+		  	<div class="mb-3">
+			<label for="title" class="form-label">Club Name</label>
+			<input type="text" class="form-control" name="title"  value= "<%= club.title %>" >
+		 	</div>
+		  	<div class="mb-3">
+			<label for="motto" class="form-label">Motto of club</label>
+			<input type="text" class="form-control" name="motto" value= "<%= club.motto %>">
+		 	 </div>
+			 <div class="mb-3">
+			<label for="stadium" class="form-label">Stadium</label>
+			<input type="text" class="form-control" name="stadium" value= "<%= club.stadium %>" >
+		  	</div>
+			 <div class="mb-3"> 
+			<label for="city" class="form-label">Club city</label>
+			<input type="text" class="form-control" name="city" value="<%= club.city %>" >
+			</div>
+			<div class="mb-3">
+			<label for="league" class="form-label">League</label>
+			<select class="form-control" id="league" name="league">
+				<option disabled>--Europe Top five Leagues--</option>
+				<option>Ligue 1</option>
+				<option>Serie A</option>
+				<option>Bundesliga</option>
+				<option>La Liga</option>
+				<option>Premier League</option>
+				</select>
+		  	</div>
+			 <div class="mb-3">
+			<label for="captain" class="form-label">Captain</label>
+			<input type="text" class="form-control" name="captain" value= "<%= club.captain %>">
+		  	</div>
+		   <div class="mb-3">
+			<label for="image" class="form-label">Link to image</label>
+			<input type="text" class="form-control" name="image" value= "<%= club.image %>">
+		  </div>
+		  <button type="submit" class="btn btn-outline-info">Submit</button>
+		</form>
+
+	</div>	
+
+
+
+<%- include("partials/footer") %>
